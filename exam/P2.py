@@ -1,12 +1,20 @@
 from math import pi
 
-def sphere_area(diameter: float, material: str, thickness: float = 1.0) -> tuple[float, float]:
+def sphere_area(diameter: float, material: str, thickness: float = 1.0) -> tuple[float, float]: #<< 함수 자체는 '문제'에 기재되어 있음.
+    '''
+    #상수 선언 및 인자값 유효성 확인
+    1. 0이거나 음수일 경우
+    2. material(재질 입력값)이 상수와 다를 경우 
+    -> ValueError
+    '''
     MATERIALS = {'유리': 2.4, '알루미늄': 2.7, '탄소강': 7.85}
     if diameter <= 0 or thickness <= 0 or material not in MATERIALS:
         raise ValueError
 
-    try:
-        density_g_cm3 = MATERIALS[material]
+    try: #try-except 필수 1
+        density_g_cm3 = MATERIALS[material] #<< 설정 필요 
+
+        # == 하기 계산식은 문제에 기재되어 있음 ===
         area_m2 = pi * (diameter ** 2)
         area_cm2 = area_m2 * 10000
         volume_cm3 = area_cm2 * thickness
