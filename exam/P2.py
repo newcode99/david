@@ -52,7 +52,7 @@ def main():
         
         area, weight = sphere_area(diameter_input, m_raw, thickness_input)
         print(f"재질: {m_raw}, 지름: {diameter_input:g}, 두께: {int(thickness_input):d}, 면적: {area:.3f}, 무게: {weight:.3f} kg")
-
+                                                            #thickness_input:g
     except ValueError:
         print('Invalid input.')
         return
