@@ -11,14 +11,13 @@ app=Flask(__name__) #관습적 변수 이름
 def menu():
     return render_template('menu.html') # templates/menu.html 파일 출력
 
-@app.route("/test1")
-def test1():
-    return render_template('test1.html')
-
 @app.route("/test2")
 def test1():
     return render_template('test2.html')
 
+# @app.route("/test3")
+# def test3():
+#     return render_template('test3.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
