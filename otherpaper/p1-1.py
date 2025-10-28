@@ -44,7 +44,7 @@ def main():
             print(result_dict)
         except:
             print('Processing Error.')
-            return    
+            return
 
     except FileNotFoundError:
         print('File open error')
